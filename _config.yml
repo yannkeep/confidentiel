@@ -9,7 +9,7 @@ url: "https://yannkeep.github.io"
 
 # Author
 author:
-  name: "Yan Doumont"
+  name: "Yan Rodrom"
   url: "https://ouaisfi.eu/"
   github: "yannkeep"
 
@@ -51,7 +51,7 @@ plugins:
 twitter:
   username: ""
 social:
-  name: "Yan Doumont"
+  name: "Yan Rodrom"
   links:
     - "https://github.com/yannkeep"
     - "https://ouaisfi.eu/"
