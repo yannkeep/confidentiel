@@ -1,0 +1,243 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://yannkeep.github.io/confidentiel/claude/data/sources-osint-belgique.json",
+  "name": "Sources OSINT Belgique — Registres et bases de données publiques",
+  "description": "Inventaire structuré des sources ouvertes pour la surveillance citoyenne en Belgique : registres officiels, bases de données publiques, archives accessibles",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "inLanguage": "fr-BE",
+  "datePublished": "2026-02",
+  "dateModified": "2026-02-09",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ouaisfi.eu",
+    "url": "https://ouaisfi.eu/",
+    "sameAs": ["https://ouaisfieu.github.io/confidentiel/", "https://ouaisfieu.github.io/alertes-sociales/"]
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Toolkit 三种公民战法",
+    "url": "https://ouaisfieu.github.io/confidentiel/claude/"
+  },
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "contentUrl": "https://yannkeep.github.io/confidentiel/claude/data/sources-osint-belgique.json"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Sources OSINT Belgique",
+    "numberOfItems": 18,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "WebSite",
+          "name": "Moniteur Belge",
+          "url": "https://www.ejustice.just.fgov.be/cgi/welcome.pl",
+          "description": "Journal officiel de la Belgique. Publie lois, arrêtés royaux, nominations, créations d'ASBL. Source primaire indispensable.",
+          "inLanguage": ["fr", "nl", "de"],
+          "keywords": ["législation", "nominations", "arrêtés", "ASBL"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "WebSite",
+          "name": "Cumuleo",
+          "url": "https://www.cumuleo.be/",
+          "description": "Base de données des mandats des élus et mandataires publics belges. Permet de tracer les cumuls et rémunérations.",
+          "keywords": ["mandats", "élus", "cumul", "rémunérations"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "WebSite",
+          "name": "BCE - Banque-Carrefour des Entreprises",
+          "url": "https://kbopub.economie.fgov.be/",
+          "description": "Registre de toutes les entreprises et associations en Belgique. Statuts, administrateurs, sièges sociaux.",
+          "keywords": ["entreprises", "ASBL", "administrateurs", "statuts"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "WebSite",
+          "name": "FSMA - Registres publics",
+          "url": "https://www.fsma.be/fr/registres-publics",
+          "description": "Autorité des services et marchés financiers. Registres des intermédiaires, prospectus, avertissements.",
+          "keywords": ["finance", "régulation", "intermédiaires", "prospectus"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "WebSite",
+          "name": "Registre de transparence UE",
+          "url": "https://ec.europa.eu/transparencyregister/",
+          "description": "Registre des lobbyistes accrédités auprès des institutions européennes. Budgets, clients, activités.",
+          "keywords": ["lobbying", "UE", "transparence", "groupes d'intérêt"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "WebSite",
+          "name": "Comptes annuels BNB",
+          "url": "https://consult.cbso.nbb.be/",
+          "description": "Centrale des bilans de la Banque Nationale. Comptes annuels de toutes les entreprises belges.",
+          "keywords": ["bilans", "comptes annuels", "finances", "entreprises"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "WebSite",
+          "name": "Juridat",
+          "url": "https://juportal.be/",
+          "description": "Portail de la jurisprudence belge. Arrêts de la Cour de cassation, cours d'appel, Conseil d'État.",
+          "keywords": ["jurisprudence", "arrêts", "tribunaux", "droit"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "WebSite",
+          "name": "Const-Court.be",
+          "url": "https://www.const-court.be/",
+          "description": "Site de la Cour constitutionnelle belge. Arrêts, recours en annulation, questions préjudicielles.",
+          "keywords": ["Cour constitutionnelle", "recours", "annulation", "arrêts"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "WebSite",
+          "name": "Raadvst-Consetat.be",
+          "url": "https://www.raadvst-consetat.be/",
+          "description": "Conseil d'État belge. Arrêts de la section du contentieux administratif, avis de la section de législation.",
+          "keywords": ["Conseil d'État", "contentieux administratif", "avis", "arrêts"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "WebSite",
+          "name": "Chambre.be - Documents parlementaires",
+          "url": "https://www.lachambre.be/kvvcr/showpage.cfm?section=/flwb&language=fr&cfm=ListDocument.cfm",
+          "description": "Documents parlementaires de la Chambre des représentants. Projets de loi, propositions, rapports de commission.",
+          "keywords": ["parlement", "lois", "propositions", "commissions"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "WebSite",
+          "name": "Parlement FWB",
+          "url": "https://www.pfwb.be/",
+          "description": "Parlement de la Fédération Wallonie-Bruxelles. Décrets, travaux parlementaires, questions écrites.",
+          "keywords": ["FWB", "décrets", "parlement", "Wallonie-Bruxelles"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "WebSite",
+          "name": "Wayback Machine",
+          "url": "https://web.archive.org/",
+          "description": "Archive d'Internet. Indispensable pour capturer et horodater les pages web avant modification ou suppression.",
+          "keywords": ["archive", "horodatage", "preuve", "capture"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "WebSite",
+          "name": "OpenTimestamps",
+          "url": "https://opentimestamps.org/",
+          "description": "Service d'horodatage cryptographique blockchain. Prouve qu'un document existait à une date donnée.",
+          "keywords": ["horodatage", "blockchain", "preuve", "timestamp"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "WebSite",
+          "name": "HUDOC - CEDH",
+          "url": "https://hudoc.echr.coe.int/",
+          "description": "Base de données de la Cour européenne des droits de l'homme. Jurisprudence complète depuis 1959.",
+          "keywords": ["CEDH", "droits de l'homme", "jurisprudence", "Europe"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "WebSite",
+          "name": "HUDOC-ESC - CEDS",
+          "url": "https://hudoc.esc.coe.int/",
+          "description": "Base de données du Comité européen des droits sociaux. Décisions sur plaintes collectives, conclusions.",
+          "keywords": ["CEDS", "droits sociaux", "plaintes collectives", "Charte sociale"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "WebSite",
+          "name": "EUR-Lex",
+          "url": "https://eur-lex.europa.eu/",
+          "description": "Portail du droit de l'Union européenne. Traités, règlements, directives, jurisprudence CJUE.",
+          "keywords": ["UE", "droit européen", "CJUE", "directives"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "WebSite",
+          "name": "Socialsecurity.be - Statistiques",
+          "url": "https://www.socialsecurity.be/",
+          "description": "Statistiques de la sécurité sociale belge. Données ONEM, INAMI, ONSS.",
+          "keywords": ["sécurité sociale", "statistiques", "ONEM", "INAMI"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "WebSite",
+          "name": "Statbel",
+          "url": "https://statbel.fgov.be/",
+          "description": "Office belge de statistique. Données démographiques, économiques, sociales officielles.",
+          "keywords": ["statistiques", "démographie", "économie", "données officielles"]
+        }
+      }
+    ]
+  },
+  "keywords": [
+    "OSINT Belgique",
+    "sources ouvertes",
+    "registres publics",
+    "surveillance citoyenne",
+    "Moniteur Belge",
+    "Cumuleo",
+    "BCE",
+    "jurisprudence belge"
+  ]
+}

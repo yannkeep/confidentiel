@@ -1,0 +1,194 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://yannkeep.github.io/confidentiel/claude/data/precedents-juridiques.json",
+  "name": "Précédents juridiques — Contentieux stratégique et droits fondamentaux",
+  "description": "Base de données des affaires judiciaires emblématiques pour le contentieux stratégique : climat, droits sociaux, accueil, surveillance. Belgique et Europe.",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "inLanguage": "fr-BE",
+  "datePublished": "2026-02",
+  "dateModified": "2026-02-09",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ouaisfi.eu",
+    "url": "https://ouaisfi.eu/"
+  },
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Toolkit 三种公民战法",
+    "url": "https://ouaisfieu.github.io/confidentiel/claude/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Précédents de contentieux stratégique",
+    "numberOfItems": 12,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "LegalCase",
+          "name": "Urgenda c. Pays-Bas",
+          "description": "Première condamnation d'un État pour inaction climatique. La Cour suprême néerlandaise confirme l'obligation de réduire les émissions de 25% d'ici 2020 sur base des articles 2 et 8 CEDH.",
+          "datePublished": "2019-12-20",
+          "locationCreated": {"@type": "Country", "name": "Pays-Bas"},
+          "about": {"@type": "Thing", "name": "Contentieux climatique"},
+          "citation": "Hoge Raad, 20 décembre 2019, ECLI:NL:HR:2019:2007",
+          "sameAs": "https://www.urgenda.nl/en/themas/climate-case/"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "LegalCase",
+          "name": "Ligue des Droits Humains c. Fedasil",
+          "description": "Saisies d'huissier au siège de Fedasil pour forcer l'État belge à respecter ses obligations d'accueil des demandeurs d'asile. Le droit comme spectacle démocratique.",
+          "locationCreated": {"@type": "Country", "name": "Belgique"},
+          "about": {"@type": "Thing", "name": "Droit d'asile"},
+          "sameAs": "https://www.lfrb.be/"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "LegalCase",
+          "name": "Affaire du Siècle (France)",
+          "description": "L'État français condamné pour 'carences fautives' dans la lutte contre le changement climatique. 2,3 millions de signatures pour la pétition associée.",
+          "datePublished": "2021-02-03",
+          "locationCreated": {"@type": "Country", "name": "France"},
+          "about": {"@type": "Thing", "name": "Contentieux climatique"},
+          "sameAs": "https://laffairedusiecle.net/"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "LegalCase",
+          "name": "Arrêt 69/2023 Cour constitutionnelle (BE)",
+          "description": "Arrêt fondateur sur le principe de standstill en matière de droits économiques et sociaux. Établit le triple test de proportionnalité : recul significatif, motif d'intérêt général, proportionnalité stricto sensu.",
+          "datePublished": "2023",
+          "locationCreated": {"@type": "Country", "name": "Belgique"},
+          "about": {"@type": "Thing", "name": "Standstill droits sociaux"},
+          "citation": "C.C., arrêt n° 69/2023"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "LegalCase",
+          "name": "Ligue des droits humains c. Conseil des ministres (CJUE C-817/19)",
+          "description": "La CJUE invalide partiellement la directive PNR sur la conservation des données des passagers aériens. Victoire pour la protection des données.",
+          "datePublished": "2022-06-21",
+          "locationCreated": {"@type": "Organization", "name": "CJUE"},
+          "about": {"@type": "Thing", "name": "Protection des données"},
+          "citation": "CJUE, 21 juin 2022, C-817/19"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "LegalCase",
+          "name": "Plainte CEDS 237/2024 — Négociation collective",
+          "description": "Plainte collective ETUC, CGSLB, CSC, FGTB contre la Belgique pour violation du droit à la négociation collective (Charte sociale européenne).",
+          "datePublished": "2024",
+          "locationCreated": {"@type": "Organization", "name": "CEDS"},
+          "about": {"@type": "Thing", "name": "Négociation collective"},
+          "citation": "CEDS, plainte n° 237/2024"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "LegalCase",
+          "name": "Recours constitutionnels 8629/8630/8632 (BE)",
+          "description": "Recours contre le décret-programme FWB (moratoire éducation permanente). Déposés les 29-30 janvier 2026, en cours d'examen.",
+          "datePublished": "2026-01-30",
+          "locationCreated": {"@type": "Country", "name": "Belgique"},
+          "about": {"@type": "Thing", "name": "Éducation permanente"},
+          "citation": "C.C., rôles 8629, 8630, 8632"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "LegalCase",
+          "name": "Klimaatzaak (Belgique)",
+          "description": "Condamnation de l'État belge et des Régions pour politique climatique insuffisante. Obligation de réduire les émissions de 55% d'ici 2030.",
+          "datePublished": "2021-06-17",
+          "locationCreated": {"@type": "Country", "name": "Belgique"},
+          "about": {"@type": "Thing", "name": "Contentieux climatique"},
+          "sameAs": "https://www.klimaatzaak.eu/"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "LegalCase",
+          "name": "FEANTSA c. France (CEDS)",
+          "description": "La France condamnée pour violation du droit au logement (article 31 Charte sociale). Précédent pour les plaintes collectives en matière de logement.",
+          "datePublished": "2017-07-05",
+          "locationCreated": {"@type": "Organization", "name": "CEDS"},
+          "about": {"@type": "Thing", "name": "Droit au logement"},
+          "citation": "CEDS, décision sur le bien-fondé, plainte n° 39/2006"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "LegalCase",
+          "name": "Bellingcat / CPI",
+          "description": "Les rapports d'investigation OSINT de Bellingcat admis comme preuves par la Cour pénale internationale. Précédent pour l'admissibilité des preuves en sources ouvertes.",
+          "locationCreated": {"@type": "Organization", "name": "CPI"},
+          "about": {"@type": "Thing", "name": "Preuves OSINT"},
+          "sameAs": "https://www.bellingcat.com/"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "LegalCase",
+          "name": "Neubauer c. Allemagne",
+          "description": "La Cour constitutionnelle allemande juge la loi climat insuffisante et ordonne un renforcement. Les droits des générations futures sont justiciables.",
+          "datePublished": "2021-04-29",
+          "locationCreated": {"@type": "Country", "name": "Allemagne"},
+          "about": {"@type": "Thing", "name": "Contentieux climatique"},
+          "citation": "BVerfG, 24 mars 2021, 1 BvR 2656/18"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "LegalCase",
+          "name": "Avis IFDH n° 2025/4",
+          "description": "L'Institut Fédéral des Droits Humains alerte sur les risques de violation de l'article 23 de la Constitution et de l'article 12 de la Charte sociale européenne par les mesures Arizona.",
+          "datePublished": "2025-07-02",
+          "locationCreated": {"@type": "Country", "name": "Belgique"},
+          "about": {"@type": "Thing", "name": "Droits sociaux"},
+          "citation": "IFDH, avis n° 2025/4, 2 juillet 2025"
+        }
+      }
+    ]
+  },
+  "keywords": [
+    "contentieux stratégique",
+    "jurisprudence",
+    "droits fondamentaux",
+    "CEDH",
+    "CEDS",
+    "Cour constitutionnelle",
+    "climat",
+    "droits sociaux",
+    "test case"
+  ]
+}
