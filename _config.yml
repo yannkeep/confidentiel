@@ -1,0 +1,65 @@
+# Alertes Sociales — Data
+# Site satellite pour yannkeep.github.io/alertes-sociales/
+
+# Site settings
+title: "Alertes Sociales — Data"
+description: "Données ouvertes sur l'exclusion sociale en Belgique. Coalition Arizona, moratoire EP, 184 463 exclusions documentées."
+baseurl: "/alertes-sociales"
+url: "https://yannkeep.github.io"
+
+# Author
+author:
+  name: "Yan Doumont"
+  url: "https://ouaisfi.eu/"
+  github: "yannkeep"
+
+# Related sites (semantic web linking)
+related_sites:
+  main_site:
+    name: "Alertes Sociales Belgique"
+    url: "https://ouaisfieu.github.io/alertes-sociales/"
+    description: "Analyses complètes"
+  parent_project:
+    name: "ouaisfi.eu"
+    url: "https://ouaisfi.eu/"
+    description: "Contre-institution numérique citoyenne"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude from build
+exclude:
+  - README.md
+  - CITATION.cff
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+
+# Include data files
+include:
+  - data
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO
+twitter:
+  username: ""
+social:
+  name: "Yan Doumont"
+  links:
+    - "https://github.com/yannkeep"
+    - "https://ouaisfi.eu/"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      lang: "fr-BE"

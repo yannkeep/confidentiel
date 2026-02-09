@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="fr-BE" prefix="og: https://ogp.me/ns# schema: https://schema.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Données ouvertes — Coalition Arizona & Moratoire EP | Belgique 2025-2027</title>
+    <meta name="title" content="Données ouvertes — Coalition Arizona & Moratoire EP | Belgique 2025-2027">
+    <meta name="description" content="Datasets téléchargeables, timeline interactive, glossaire juridique. 184 463 exclusions chômage, 270 associations EP gelées. Données sous licence CC BY-SA 4.0.">
+    <meta name="keywords" content="données ouvertes Belgique, open data droits sociaux, coalition Arizona données, ONEM statistiques, exclusion chômage CSV, timeline Arizona FWB, glossaire article 23, standstill données">
+    <meta name="author" content="Yan Doumont">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical & Alternate -->
+    <link rel="canonical" href="https://yannkeep.github.io/alertes-sociales/">
+    <link rel="alternate" hreflang="fr-BE" href="https://yannkeep.github.io/alertes-sociales/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yannkeep.github.io/alertes-sociales/">
+    <meta property="og:title" content="Données ouvertes — Coalition Arizona & Moratoire EP">
+    <meta property="og:description" content="Datasets téléchargeables sur l'exclusion sociale en Belgique. Timeline, glossaire, chiffres clés sous licence libre.">
+    <meta property="og:site_name" content="Alertes Sociales — Data">
+    <meta property="og:locale" content="fr_BE">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Open Data — Exclusion sociale Belgique 2025-2027">
+    <meta name="twitter:description" content="184 463 exclusions chômage documentées. Datasets CSV/JSON téléchargeables, timeline interactive.">
+    
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="Données ouvertes sur l'exclusion sociale en Belgique">
+    <meta name="DC.creator" content="Yan Doumont">
+    <meta name="DC.subject" content="Open data; Belgique; Exclusion sociale; Chômage; Éducation Permanente">
+    <meta name="DC.description" content="Datasets et ressources documentant les politiques Arizona et le moratoire FWB">
+    <meta name="DC.date" content="2026-02-09">
+    <meta name="DC.type" content="Dataset">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.language" content="fr-BE">
+    <meta name="DC.rights" content="CC BY-SA 4.0">
+    
+    <!-- Schema.org JSON-LD : DataCatalog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DataCatalog",
+        "@id": "https://yannkeep.github.io/alertes-sociales/#datacatalog",
+        "name": "Données ouvertes — Exclusion sociale Belgique 2025-2027",
+        "description": "Catalogue de datasets documentant l'impact des mesures Arizona et du moratoire FWB sur les droits sociaux en Belgique",
+        "url": "https://yannkeep.github.io/alertes-sociales/",
+        "creator": {
+            "@type": "Person",
+            "name": "Yan Doumont",
+            "url": "https://ouaisfi.eu/"
+        },
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "datePublished": "2026-02-09",
+        "dateModified": "2026-02-09",
+        "inLanguage": "fr-BE",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Alertes Sociales Belgique",
+            "url": "https://ouaisfieu.github.io/alertes-sociales/",
+            "description": "Surveillance citoyenne des droits sociaux en Belgique"
+        },
+        "dataset": [
+            {
+                "@type": "Dataset",
+                "@id": "https://yannkeep.github.io/alertes-sociales/#exclusions-chomage",
+                "name": "Exclusions chômage Belgique 2026-2027",
+                "description": "Projections ONEM des exclusions du chômage par région, ventilées par âge",
+                "url": "https://yannkeep.github.io/alertes-sociales/data/exclusions-chomage-2026.csv",
+                "distribution": {
+                    "@type": "DataDownload",
+                    "encodingFormat": "text/csv",
+                    "contentUrl": "https://yannkeep.github.io/alertes-sociales/data/exclusions-chomage-2026.csv"
+                },
+                "temporalCoverage": "2026/2027",
+                "spatialCoverage": {
+                    "@type": "Place",
+                    "name": "Belgique"
+                },
+                "variableMeasured": [
+                    "Nombre d'exclusions du chômage",
+                    "Répartition régionale",
+                    "Pourcentage 55+ exclus"
+                ],
+                "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+            },
+            {
+                "@type": "Dataset",
+                "@id": "https://yannkeep.github.io/alertes-sociales/#timeline",
+                "name": "Timeline Arizona-FWB 2025-2026",
+                "description": "Chronologie complète des événements législatifs, juridiques et sociaux",
+                "url": "https://yannkeep.github.io/alertes-sociales/data/timeline-arizona-fwb.json",
+                "distribution": {
+                    "@type": "DataDownload",
+                    "encodingFormat": "application/json",
+                    "contentUrl": "https://yannkeep.github.io/alertes-sociales/data/timeline-arizona-fwb.json"
+                },
+                "temporalCoverage": "2025-01/2026-03",
+                "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+            },
+            {
+                "@type": "Dataset",
+                "@id": "https://yannkeep.github.io/alertes-sociales/#glossaire",
+                "name": "Glossaire juridique droits sociaux Belgique",
+                "description": "Définitions structurées des concepts juridiques et institutionnels clés",
+                "url": "https://yannkeep.github.io/alertes-sociales/data/glossaire-juridique.json",
+                "distribution": {
+                    "@type": "DataDownload",
+                    "encodingFormat": "application/json",
+                    "contentUrl": "https://yannkeep.github.io/alertes-sociales/data/glossaire-juridique.json"
+                },
+                "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+            }
+        ],
+        "keywords": ["open data", "Belgique", "chômage", "exclusion sociale", "Éducation Permanente", "coalition Arizona", "droits sociaux"]
+    }
+    </script>
+    
+    <!-- Schema.org JSON-LD : WebPage avec lien vers site parent -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Données ouvertes — Coalition Arizona & Moratoire EP",
+        "url": "https://yannkeep.github.io/alertes-sociales/",
+        "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://ouaisfieu.github.io/alertes-sociales/#website",
+            "name": "Alertes Sociales Belgique",
+            "url": "https://ouaisfieu.github.io/alertes-sociales/"
+        },
+        "about": [
+            {
+                "@type": "Thing",
+                "name": "Coalition Arizona",
+                "description": "Gouvernement fédéral belge 2025-2029"
+            },
+            {
+                "@type": "Thing",
+                "name": "Moratoire Éducation Permanente",
+                "description": "Gel des reconnaissances EP en FWB 2026-2028"
+            }
+        ],
+        "mentions": [
+            {
+                "@type": "GovernmentOrganization",
+                "name": "ONEM",
+                "sameAs": "https://www.onem.be/"
+            },
+            {
+                "@type": "Organization",
+                "name": "FGTB",
+                "sameAs": "https://www.fgtb.be/"
+            }
+        ],
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Alertes Sociales",
+                    "item": "https://ouaisfieu.github.io/alertes-sociales/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Données ouvertes",
+                    "item": "https://yannkeep.github.io/alertes-sociales/"
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Aller au contenu</a>
+    
+    <header class="site-header">
+        <div class="container">
+            <div class="header-brand">
+                <span class="brand-icon">📊</span>
+                <div class="brand-text">
+                    <span class="brand-title">Alertes Sociales — Data</span>
+                    <span class="brand-subtitle">Données ouvertes sur l'exclusion sociale</span>
+                </div>
+            </div>
+            <nav class="header-nav" aria-label="Navigation principale">
+                <a href="#datasets">Datasets</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#glossaire">Glossaire</a>
+                <a href="https://ouaisfieu.github.io/alertes-sociales/" class="nav-external">Analyses complètes ↗</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <h1>Données ouvertes<br><span class="highlight">Coalition Arizona & Moratoire EP</span></h1>
+                <p class="hero-lead">
+                    Datasets téléchargeables documentant l'impact des mesures Arizona et du moratoire FWB 
+                    sur les droits sociaux en Belgique (2025-2027). Licence <strong>CC BY-SA 4.0</strong>.
+                </p>
+                
+                <div class="key-stats">
+                    <div class="stat-card">
+                        <span class="stat-value">184 463</span>
+                        <span class="stat-label">Exclusions chômage prévues d'ici 2027</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">270</span>
+                        <span class="stat-label">Associations EP gelées</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">2 300</span>
+                        <span class="stat-label">Travailleurs EP affectés</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">Recours constitutionnels</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="https://ouaisfieu.github.io/alertes-sociales/" class="btn btn-primary">
+                        📖 Lire les analyses complètes
+                    </a>
+                    <a href="#datasets" class="btn btn-secondary">
+                        ⬇️ Télécharger les données
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Datasets -->
+        <section id="datasets" class="section">
+            <div class="container">
+                <h2>📁 Datasets disponibles</h2>
+                <p class="section-intro">
+                    Toutes les données sont librement téléchargeables et réutilisables sous licence 
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>. 
+                    Citation recommandée via le fichier <code>CITATION.cff</code>.
+                </p>
+                
+                <div class="dataset-grid">
+                    <article class="dataset-card">
+                        <div class="dataset-icon">📈</div>
+                        <h3>Exclusions chômage 2026-2027</h3>
+                        <p>Projections ONEM par région, ventilées par tranche d'âge. 100 102 exclusions dès janvier 2026.</p>
+                        <div class="dataset-meta">
+                            <span class="tag">CSV</span>
+                            <span class="tag">ONEM</span>
+                            <span class="tag">2026</span>
+                        </div>
+                        <div class="dataset-actions">
+                            <a href="data/exclusions-chomage-2026.csv" download class="btn btn-small">⬇️ Télécharger CSV</a>
+                            <a href="data/exclusions-chomage-2026.csv" target="_blank" class="btn btn-small btn-ghost">Voir</a>
+                        </div>
+                    </article>
+                    
+                    <article class="dataset-card">
+                        <div class="dataset-icon">📅</div>
+                        <h3>Timeline Arizona-FWB</h3>
+                        <p>Chronologie complète des événements législatifs, juridiques et mobilisations sociales (2025-2026).</p>
+                        <div class="dataset-meta">
+                            <span class="tag">JSON</span>
+                            <span class="tag">20 événements</span>
+                        </div>
+                        <div class="dataset-actions">
+                            <a href="data/timeline-arizona-fwb.json" download class="btn btn-small">⬇️ Télécharger JSON</a>
+                            <a href="data/timeline-arizona-fwb.json" target="_blank" class="btn btn-small btn-ghost">Voir</a>
+                        </div>
+                    </article>
+                    
+                    <article class="dataset-card">
+                        <div class="dataset-icon">📚</div>
+                        <h3>Glossaire juridique</h3>
+                        <p>15+ termes définis : article 23, standstill, Pacte culturel, PIIS, CPAS, ONEM, etc.</p>
+                        <div class="dataset-meta">
+                            <span class="tag">JSON</span>
+                            <span class="tag">Wikidata</span>
+                        </div>
+                        <div class="dataset-actions">
+                            <a href="data/glossaire-juridique.json" download class="btn btn-small">⬇️ Télécharger JSON</a>
+                            <a href="data/glossaire-juridique.json" target="_blank" class="btn btn-small btn-ghost">Voir</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Timeline -->
+        <section id="timeline" class="section section-alt">
+            <div class="container">
+                <h2>📅 Timeline interactive</h2>
+                <p class="section-intro">
+                    Chronologie des événements majeurs de janvier 2025 à mars 2026.
+                    <a href="data/timeline-arizona-fwb.json" download>Télécharger en JSON</a> pour intégration.
+                </p>
+                
+                <div class="timeline">
+                    <div class="timeline-item" data-type="legislation">
+                        <time datetime="2025-01-31">31 jan. 2025</time>
+                        <div class="timeline-content">
+                            <h3>Accord Arizona</h3>
+                            <p>Signature MR-N-VA-CD&V-Les Engagés-Vooruit. Limitation chômage à 24 mois incluse.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-type="juridique">
+                        <time datetime="2025-07-02">2 juil. 2025</time>
+                        <div class="timeline-content">
+                            <h3>Avis IFDH n° 2025/4</h3>
+                            <p>L'Institut Fédéral des Droits Humains alerte sur les risques de violation de l'article 23.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-type="legislation">
+                        <time datetime="2025-07-18">18 juil. 2025</time>
+                        <div class="timeline-content">
+                            <h3>Vote limitation 24 mois</h3>
+                            <p>La Chambre adopte la limitation des allocations de chômage.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-type="mobilisation">
+                        <time datetime="2025-10-14">14 oct. 2025</time>
+                        <div class="timeline-content">
+                            <h3>Manifestation nationale</h3>
+                            <p>80 000 à 140 000 personnes à Bruxelles contre les mesures Arizona.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-type="mobilisation">
+                        <time datetime="2025-11-24">24-26 nov. 2025</time>
+                        <div class="timeline-content">
+                            <h3>Grève générale (3 jours)</h3>
+                            <p>Trois journées de grève nationale, paralysie du pays.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-type="legislation">
+                        <time datetime="2025-12-17">17 déc. 2025</time>
+                        <div class="timeline-content">
+                            <h3>Décret-programme FWB</h3>
+                            <p>Moratoire Éducation Permanente : 270 associations gelées, 2 300 travailleurs affectés.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-type="application">
+                        <time datetime="2026-01-01">1er jan. 2026</time>
+                        <div class="timeline-content">
+                            <h3>Premières exclusions</h3>
+                            <p>100 102 chômeurs &lt;55 ans exclus. Moratoire EP entre en vigueur.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-type="juridique">
+                        <time datetime="2026-01-29">29-30 jan. 2026</time>
+                        <div class="timeline-content">
+                            <h3>Recours constitutionnels</h3>
+                            <p>Dépôt des recours 8629, 8630, 8632 contre le décret-programme FWB.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-type="mobilisation" data-status="planned">
+                        <time datetime="2026-03-12">12 mars 2026</time>
+                        <div class="timeline-content">
+                            <h3>Manifestation annoncée</h3>
+                            <p>Nouvelle mobilisation nationale contre les mesures Arizona.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Glossaire -->
+        <section id="glossaire" class="section">
+            <div class="container">
+                <h2>📚 Glossaire juridique</h2>
+                <p class="section-intro">
+                    Termes clés pour comprendre les enjeux. 
+                    <a href="data/glossaire-juridique.json" download>Télécharger en JSON</a> (avec liens Wikidata).
+                </p>
+                
+                <div class="glossary">
+                    <details class="glossary-item" id="def-article-23">
+                        <summary><strong>Article 23 de la Constitution</strong></summary>
+                        <div class="glossary-content">
+                            <p>Article de la Constitution belge (1994) garantissant le droit de mener « une vie conforme à la dignité humaine », incluant le droit au travail, à la sécurité sociale, au logement, à l'épanouissement culturel et social.</p>
+                            <p><strong>Implication :</strong> Fondement du principe de standstill.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="glossary-item" id="def-standstill">
+                        <summary><strong>Principe de standstill</strong></summary>
+                        <div class="glossary-content">
+                            <p>Principe jurisprudentiel interdisant au législateur de réduire significativement le niveau de protection des droits économiques, sociaux et culturels sans justification raisonnable.</p>
+                            <p><strong>Triple test (arrêt 69/2023) :</strong></p>
+                            <ol>
+                                <li>Existence d'un recul significatif</li>
+                                <li>Justification par un motif d'intérêt général</li>
+                                <li>Proportionnalité stricto sensu</li>
+                            </ol>
+                        </div>
+                    </details>
+                    
+                    <details class="glossary-item" id="def-ep">
+                        <summary><strong>Éducation Permanente (EP)</strong></summary>
+                        <div class="glossary-content">
+                            <p>Secteur défini par le décret du 17 juillet 2003 visant « l'analyse critique de la société, la stimulation d'initiatives démocratiques et collectives, le développement de la citoyenneté active ».</p>
+                            <p><strong>Chiffres :</strong> 270 associations, 2 300 travailleurs, budget de 12,9 M€.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="glossary-item" id="def-pacte-culturel">
+                        <summary><strong>Pacte culturel (1973)</strong></summary>
+                        <div class="glossary-content">
+                            <p>Loi du 16 juillet 1973 garantissant la non-discrimination idéologique et la participation de toutes les tendances philosophiques et politiques à la politique culturelle.</p>
+                            <p><strong>Application :</strong> Protection des centres d'études politiques (IEV, CEPESS, Centre Jean Gol, Etopia, etc.).</p>
+                        </div>
+                    </details>
+                    
+                    <details class="glossary-item" id="def-piis">
+                        <summary><strong>PIIS (Projet Individualisé d'Intégration Sociale)</strong></summary>
+                        <div class="glossary-content">
+                            <p>Contrat obligatoire depuis 2016 pour les bénéficiaires du RIS, définissant leurs engagements en échange de l'aide sociale.</p>
+                            <p><strong>Critique :</strong> « Stigmatisation de l'inactif » (Abraham Franssen, UCLouvain). 106 200 personnes concernées en 2020.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="glossary-item" id="def-coalition-arizona">
+                        <summary><strong>Coalition Arizona</strong></summary>
+                        <div class="glossary-content">
+                            <p>Gouvernement fédéral belge formé le 31 janvier 2025, réunissant MR, N-VA, CD&V, Les Engagés et Vooruit sous la direction de Bart De Wever.</p>
+                            <p><strong>Mesures phares :</strong> Limitation chômage 24 mois, gel des salaires, sanctions renforcées malades longue durée.</p>
+                        </div>
+                    </details>
+                </div>
+                
+                <p class="glossary-more">
+                    <a href="data/glossaire-juridique.json" download>📥 Télécharger le glossaire complet (15+ termes, JSON)</a>
+                </p>
+            </div>
+        </section>
+        
+        <!-- CTA vers site principal -->
+        <section class="section section-cta">
+            <div class="container">
+                <h2>📖 Analyses complètes</h2>
+                <p>Ces données alimentent les analyses publiées sur <strong>Alertes Sociales Belgique</strong> :</p>
+                
+                <div class="article-links">
+                    <a href="https://ouaisfieu.github.io/alertes-sociales/articles/demantelement-orchestree.html" class="article-link">
+                        <span class="article-category">Analyse institutionnelle</span>
+                        <span class="article-title">Le démantèlement orchestré</span>
+                        <span class="article-desc">Quand l'État fabrique des exclus et leur retire les outils de résistance</span>
+                    </a>
+                    
+                    <a href="https://ouaisfieu.github.io/alertes-sociales/articles/depossession-pouvoir-agir.html" class="article-link">
+                        <span class="article-category">Recherche documentaire</span>
+                        <span class="article-title">La dépossession citoyenne (1980-2026)</span>
+                        <span class="article-desc">VOKA, capture corporatiste, fracture numérique, concentration médiatique</span>
+                    </a>
+                    
+                    <a href="https://ouaisfieu.github.io/alertes-sociales/articles/strategie-medias-publication.html" class="article-link">
+                        <span class="article-category">Guide pratique</span>
+                        <span class="article-title">Cartographie des médias</span>
+                        <span class="article-desc">Stratégie de publication en cascade pour maximiser l'impact</span>
+                    </a>
+                </div>
+                
+                <p class="cta-main">
+                    <a href="https://ouaisfieu.github.io/alertes-sociales/" class="btn btn-primary btn-large">
+                        Accéder à Alertes Sociales Belgique →
+                    </a>
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Licence</h3>
+                    <p>
+                        Données et contenus sous 
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>
+                    </p>
+                    <p>Citation : voir <code>CITATION.cff</code></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Projets liés</h3>
+                    <ul>
+                        <li><a href="https://ouaisfieu.github.io/alertes-sociales/">Alertes Sociales Belgique</a></li>
+                        <li><a href="https://ouaisfi.eu/">ouaisfi.eu</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Yan Doumont</p>
+                    <p><a href="https://github.com/yannkeep">GitHub @yannkeep</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 — Mis à jour le <time datetime="2026-02-09">9 février 2026</time></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
