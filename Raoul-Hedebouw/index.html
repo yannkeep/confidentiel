@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur d'impact — Mesures Arizona 2026</title>
+    <style>
+        :root {
+            --bg: #0c0c0c;
+            --surface: #161616;
+            --surface-hover: #1c1c1c;
+            --border: #2a2a2a;
+            --text: #f0f0f0;
+            --text-muted: #777;
+            --accent: #ff4444;
+            --accent-dim: rgba(255,68,68,0.15);
+            --warning: #ffaa00;
+            --info: #4488ff;
+            --success: #44cc66;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .app {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            color: var(--text-muted);
+            font-size: 0.9375rem;
+        }
+        
+        /* Form */
+        .form-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        label {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        select, input[type="number"] {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            color: var(--text);
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        
+        select:focus, input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        select option {
+            background: var(--bg);
+            color: var(--text);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 0.25rem;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.875rem;
+        }
+        
+        .checkbox-item:hover {
+            border-color: var(--text-muted);
+        }
+        
+        .checkbox-item.selected {
+            border-color: var(--accent);
+            background: var(--accent-dim);
+        }
+        
+        .checkbox-item input {
+            display: none;
+        }
+        
+        /* Results */
+        .results {
+            display: none;
+        }
+        
+        .results.visible {
+            display: block;
+        }
+        
+        .result-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .result-card.critical {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, var(--accent-dim), var(--surface));
+        }
+        
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .result-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        
+        .risk-badge {
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.375rem 0.75rem;
+            border-radius: 100px;
+        }
+        
+        .risk-badge.critical {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .risk-badge.high {
+            background: var(--warning);
+            color: black;
+        }
+        
+        .risk-badge.medium {
+            background: var(--info);
+            color: white;
+        }
+        
+        .impact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .impact-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg);
+            border-radius: 8px;
+        }
+        
+        .impact-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .impact-content h4 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .impact-content p {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+        }
+        
+        .impact-content .source {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        
+        /* Leviers */
+        .leviers-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+        
+        .leviers-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--success);
+        }
+        
+        .levier-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: rgba(68,204,102,0.1);
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .levier-item::before {
+            content: '⚖️';
+            flex-shrink: 0;
+        }
+        
+        /* Stats */
+        .stats-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-mini {
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+        
+        .stat-mini-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .stat-mini-label {
+            font-size: 0.6875rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Button */
+        .btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.1s, opacity 0.2s;
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+        }
+        
+        .btn:active {
+            transform: scale(0.98);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.8125rem;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 600px) {
+            .app { padding: 1rem; }
+            .form-section, .result-card { padding: 1.25rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .stats-bar { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>🎯 Simulateur d'impact</h1>
+            <p class="tagline">Mesures Arizona & Moratoire FWB — Évaluez votre exposition</p>
+        </header>
+        
+        <div class="form-section">
+            <h2 class="form-title">📋 Votre situation</h2>
+            <div class="form-grid">
+                <div class="field">
+                    <label for="statut">Statut actuel</label>
+                    <select id="statut">
+                        <option value="">Sélectionnez...</option>
+                        <option value="chomeur">Chômeur·se indemnisé·e</option>
+                        <option value="malade">Incapacité de travail / Invalidité</option>
+                        <option value="cpas">Bénéficiaire RIS/CPAS</option>
+                        <option value="travailleur-ep">Travailleur·se secteur EP</option>
+                        <option value="benevole-ep">Bénévole/participant·e EP</option>
+                        <option value="etudiant">Étudiant·e</option>
+                        <option value="salarie">Salarié·e</option>
+                    </select>
+                </div>
+                
+                <div class="field">
+                    <label for="region">Région</label>
+                    <select id="region">
+                        <option value="">Sélectionnez...</option>
+                        <option value="wallonie">Wallonie</option>
+                        <option value="bruxelles">Bruxelles</option>
+                        <option value="flandre">Flandre</option>
+                    </select>
+                </div>
+                
+                <div class="field">
+                    <label for="age">Tranche d'âge</label>
+                    <select id="age">
+                        <option value="">Sélectionnez...</option>
+                        <option value="moins25">Moins de 25 ans</option>
+                        <option value="25-54">25-54 ans</option>
+                        <option value="55plus">55 ans et plus</option>
+                    </select>
+                </div>
+                
+                <div class="field">
+                    <label for="duree">Durée actuelle au chômage (si applicable)</label>
+                    <select id="duree">
+                        <option value="">Non applicable</option>
+                        <option value="moins12">Moins de 12 mois</option>
+                        <option value="12-24">12 à 24 mois</option>
+                        <option value="plus24">Plus de 24 mois</option>
+                        <option value="plus20ans">Plus de 20 ans</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="field" style="margin-top: 1.5rem;">
+                <label>Facteurs de vulnérabilité</label>
+                <div class="checkbox-group" id="facteurs">
+                    <label class="checkbox-item" data-value="monoparental">
+                        <input type="checkbox"> Parent isolé
+                    </label>
+                    <label class="checkbox-item" data-value="cohabitant">
+                        <input type="checkbox"> Cohabitant·e
+                    </label>
+                    <label class="checkbox-item" data-value="sans-diplome">
+                        <input type="checkbox"> Sans diplôme secondaire
+                    </label>
+                    <label class="checkbox-item" data-value="numerique">
+                        <input type="checkbox"> Difficultés numériques
+                    </label>
+                    <label class="checkbox-item" data-value="femme">
+                        <input type="checkbox"> Femme
+                    </label>
+                    <label class="checkbox-item" data-value="burnout">
+                        <input type="checkbox"> Burn-out/dépression
+                    </label>
+                </div>
+            </div>
+            
+            <button class="btn" style="margin-top: 2rem;" onclick="simuler()">Analyser ma situation</button>
+        </div>
+        
+        <div class="results" id="results">
+            <!-- Résultats injectés ici -->
+        </div>
+        
+        <footer>
+            <p>Données issues des documents ONEM, IFDH, INAMI, Baromètre FRB 2024</p>
+            <p>Aucune donnée personnelle n'est collectée ni transmise</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Checkbox toggle
+        document.querySelectorAll('.checkbox-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('selected');
+                item.querySelector('input').checked = item.classList.contains('selected');
+            });
+        });
+        
+        function getSelectedFacteurs() {
+            return Array.from(document.querySelectorAll('.checkbox-item.selected'))
+                .map(el => el.dataset.value);
+        }
+        
+        function simuler() {
+            const statut = document.getElementById('statut').value;
+            const region = document.getElementById('region').value;
+            const age = document.getElementById('age').value;
+            const duree = document.getElementById('duree').value;
+            const facteurs = getSelectedFacteurs();
+            
+            if (!statut || !region) {
+                alert('Veuillez remplir au minimum le statut et la région.');
+                return;
+            }
+            
+            const impacts = [];
+            const leviers = [];
+            let riskLevel = 'medium';
+            
+            // Logique basée sur les documents sources
+            
+            // CHÔMEUR
+            if (statut === 'chomeur') {
+                riskLevel = 'critical';
+                
+                if (duree === 'plus24' || duree === 'plus20ans') {
+                    impacts.push({
+                        icon: '🚨',
+                        title: 'Exclusion imminente',
+                        desc: 'Avec plus de 24 mois de chômage, vous faites partie des 184 463 personnes qui seront exclues d\'ici juillet 2027.',
+                        source: 'Source : ONEM'
+                    });
+                } else if (duree === '12-24') {
+                    impacts.push({
+                        icon: '⚠️',
+                        title: 'Exclusion à court terme',
+                        desc: 'Vous approchez de la limite des 24 mois. Sans retour à l\'emploi, vous serez exclu·e du système.',
+                        source: 'Source : Réforme Arizona, entrée en vigueur 1er janvier 2026'
+                    });
+                }
+                
+                if (age === '55plus') {
+                    impacts.push({
+                        icon: '📊',
+                        title: '82% des 55+ exclus malgré les "protections"',
+                        desc: 'Les protections annoncées pour les plus de 55 ans sont largement illusoires selon la FGTB.',
+                        source: 'Source : FGTB'
+                    });
+                }
+                
+                if (region === 'bruxelles') {
+                    impacts.push({
+                        icon: '🏙️',
+                        title: '42% sans droit au RIS à Bruxelles',
+                        desc: 'Si exclu·e du chômage, vous avez 42% de risque de n\'avoir droit à aucun revenu de remplacement.',
+                        source: 'Source : Fédération des CPAS'
+                    });
+                }
+                
+                if (facteurs.includes('cohabitant')) {
+                    impacts.push({
+                        icon: '👥',
+                        title: '90% des cohabitants sans RIS',
+                        desc: 'En tant que cohabitant·e, vous avez 90% de risque de ne pas ouvrir le droit au RIS après exclusion.',
+                        source: 'Source : Fédération des CPAS'
+                    });
+                }
+                
+                if (facteurs.includes('sans-diplome')) {
+                    impacts.push({
+                        icon: '📚',
+                        title: 'Profil "éloigné de l\'emploi"',
+                        desc: '50% des personnes éloignées de l\'emploi n\'ont pas de diplôme du secondaire supérieur.',
+                        source: 'Source : Fédération des CPAS wallons'
+                    });
+                }
+                
+                leviers.push('Article 23 Constitution — Droit à l\'épanouissement social');
+                leviers.push('Charte sociale européenne art. 12 — Sécurité sociale');
+                leviers.push('Avis IFDH n° 2025/4 — Violation de proportionnalité');
+                leviers.push('Recours constitutionnels 8629, 8630, 8632 en cours');
+            }
+            
+            // MALADE
+            if (statut === 'malade') {
+                riskLevel = 'high';
+                
+                impacts.push({
+                    icon: '💊',
+                    title: '526 000+ malades sanctionnés',
+                    desc: 'Les malades de longue durée subissent un renforcement des sanctions pouvant atteindre -10% de réduction des indemnités.',
+                    source: 'Source : Documents Arizona'
+                });
+                
+                if (facteurs.includes('femme') && facteurs.includes('burnout')) {
+                    impacts.push({
+                        icon: '👩',
+                        title: '69% des burn-out/dépression sont des femmes',
+                        desc: 'Les femmes représentent 69% des cas d\'invalidité pour burn-out et dépression. 137 454 personnes concernées.',
+                        source: 'Source : INAMI 2023'
+                    });
+                }
+                
+                if (facteurs.includes('burnout')) {
+                    impacts.push({
+                        icon: '📈',
+                        title: '+44% en 5 ans',
+                        desc: 'Les invalidités pour dépression/burn-out ont augmenté de 44% sur cinq ans.',
+                        source: 'Source : INAMI, publié juin 2025'
+                    });
+                }
+                
+                leviers.push('Article 23 Constitution — Protection sociale');
+                leviers.push('Charte sociale européenne art. 12');
+            }
+            
+            // TRAVAILLEUR EP
+            if (statut === 'travailleur-ep') {
+                riskLevel = 'critical';
+                
+                impacts.push({
+                    icon: '🏢',
+                    title: '2 300 emplois menacés',
+                    desc: 'Le moratoire FWB gèle 270 associations d\'Éducation Permanente et leurs 2 300 travailleurs.',
+                    source: 'Source : Décret-programme FWB, 17 décembre 2025'
+                });
+                
+                impacts.push({
+                    icon: '📉',
+                    title: 'Effet ciseaux 2026',
+                    desc: 'Non-indexation des subventions en 2026 alors que les salaires sont indexés = perte de pouvoir d\'achat structurelle.',
+                    source: 'Source : Décret-programme FWB'
+                });
+                
+                impacts.push({
+                    icon: '🔒',
+                    title: 'Moratoire jusqu\'en 2028',
+                    desc: 'Aucune nouvelle reconnaissance possible en 2026-2027. Gel étendu sur 7 secteurs culturels.',
+                    source: 'Source : Décret-programme FWB'
+                });
+                
+                leviers.push('Pacte culturel 16 juillet 1973 — Non-discrimination idéologique');
+                leviers.push('Article 23 Constitution — Droits culturels');
+                leviers.push('Recours constitutionnels 8629, 8630, 8632');
+            }
+            
+            // BÉNÉVOLE EP
+            if (statut === 'benevole-ep') {
+                riskLevel = 'high';
+                
+                impacts.push({
+                    icon: '🤝',
+                    title: 'Perte d\'accompagnement',
+                    desc: 'Les associations EP jouent un rôle crucial dans l\'accès aux droits. Le moratoire réduit ces ressources.',
+                    source: 'Source : Service interfédéral de lutte contre la pauvreté'
+                });
+                
+                impacts.push({
+                    icon: '📋',
+                    title: 'Non-recours accru',
+                    desc: 'Sans accompagnement EP, risque de "disparaître des radars" par non-recours aux droits.',
+                    source: 'Source : Fédération des CPAS'
+                });
+                
+                leviers.push('Article 23 Constitution — Épanouissement culturel et social');
+            }
+            
+            // ÉTUDIANT
+            if (statut === 'etudiant') {
+                riskLevel = 'medium';
+                
+                impacts.push({
+                    icon: '🎓',
+                    title: '9% des 18-24 ans au RIS',
+                    desc: 'Environ 19 200 étudiants reçoivent le RIS — un chiffre qui a doublé en 10 ans.',
+                    source: 'Source : InES 2022'
+                });
+                
+                impacts.push({
+                    icon: '💼',
+                    title: '41,6% travaillent pour étudier',
+                    desc: 'La précarité étudiante est massive.',
+                    source: 'Source : Croix-Rouge 2023'
+                });
+                
+                if (age === 'moins25') {
+                    impacts.push({
+                        icon: '😰',
+                        title: '1 jeune sur 4 en détresse',
+                        desc: 'Un jeune de 15-24 ans sur quatre présente des symptômes de dépression ou d\'anxiété.',
+                        source: 'Source : Sciensano 2023-2024'
+                    });
+                }
+            }
+            
+            // FACTEURS TRANSVERSAUX
+            if (facteurs.includes('numerique')) {
+                impacts.push({
+                    icon: '💻',
+                    title: '40% de vulnérabilité numérique',
+                    desc: '8% d\'exclusion totale + 18% de sous-connexion + 14% d\'utilisateurs à risque. Objectif 100% e-services d\'ici 2030.',
+                    source: 'Source : Baromètre inclusion numérique FRB 2024'
+                });
+            }
+            
+            if (facteurs.includes('monoparental')) {
+                impacts.push({
+                    icon: '👨‍👧',
+                    title: '80% des monoparentaux sont des femmes',
+                    desc: 'La réforme touche de plein fouet les parents isolés sans accès à la garde d\'enfants.',
+                    source: 'Source : BCSS 2018, Ligue des familles juin 2025'
+                });
+            }
+            
+            if (facteurs.includes('femme')) {
+                impacts.push({
+                    icon: '⚧️',
+                    title: '"Déclaration de guerre contre les femmes"',
+                    desc: 'Le Collecti.e.f 8 maars qualifie ainsi les mesures Arizona. Le gouvernement ne compte que 4 femmes sur 15 ministres.',
+                    source: 'Source : Collecti.e.f 8 maars'
+                });
+            }
+            
+            // Générer le HTML
+            let html = '';
+            
+            // Stats bar
+            const statsData = {
+                'chomeur': { exclusions: '184 463', date: '2027' },
+                'malade': { exclusions: '526 000+', date: '2026' },
+                'travailleur-ep': { exclusions: '2 300', date: '2026-2028' },
+            };
+            
+            if (statsData[statut]) {
+                html += `
+                <div class="stats-bar">
+                    <div class="stat-mini">
+                        <div class="stat-mini-value">${statsData[statut].exclusions}</div>
+                        <div class="stat-mini-label">Personnes impactées</div>
+                    </div>
+                    <div class="stat-mini">
+                        <div class="stat-mini-value">${statsData[statut].date}</div>
+                        <div class="stat-mini-label">Horizon</div>
+                    </div>
+                    <div class="stat-mini">
+                        <div class="stat-mini-value">3</div>
+                        <div class="stat-mini-label">Recours en cours</div>
+                    </div>
+                </div>`;
+            }
+            
+            // Impacts
+            html += `
+            <div class="result-card ${riskLevel === 'critical' ? 'critical' : ''}">
+                <div class="result-header">
+                    <h3 class="result-title">Impacts identifiés pour votre profil</h3>
+                    <span class="risk-badge ${riskLevel}">${riskLevel === 'critical' ? 'Risque critique' : riskLevel === 'high' ? 'Risque élevé' : 'Risque modéré'}</span>
+                </div>
+                <ul class="impact-list">
+                    ${impacts.map(i => `
+                        <li class="impact-item">
+                            <span class="impact-icon">${i.icon}</span>
+                            <div class="impact-content">
+                                <h4>${i.title}</h4>
+                                <p>${i.desc}</p>
+                                <p class="source">${i.source}</p>
+                            </div>
+                        </li>
+                    `).join('')}
+                </ul>
+                
+                ${leviers.length > 0 ? `
+                <div class="leviers-section">
+                    <h4 class="leviers-title">⚖️ Leviers juridiques mobilisables</h4>
+                    ${leviers.map(l => `<div class="levier-item">${l}</div>`).join('')}
+                </div>
+                ` : ''}
+            </div>`;
+            
+            document.getElementById('results').innerHTML = html;
+            document.getElementById('results').classList.add('visible');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
