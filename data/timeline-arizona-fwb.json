@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Timeline Arizona-FWB 2025-2026",
+  "description": "Chronologie des mesures d'exclusion sociale en Belgique",
+  "version": "1.0.0",
+  "updated": "2026-02-09",
+  "license": "CC-BY-SA-4.0",
+  "source": "https://ouaisfieu.github.io/alertes-sociales/",
+  "events": [
+    {
+      "date": "2025-01-31",
+      "type": "legislation",
+      "title": "Accord de coalition Arizona",
+      "description": "Signature de l'accord MR-N-VA-CD&V-Les Engagés-Vooruit incluant la limitation du chômage à 24 mois",
+      "actors": ["MR", "N-VA", "CD&V", "Les Engagés", "Vooruit"],
+      "impact": "federal",
+      "sources": ["https://www.belgium.be/"]
+    },
+    {
+      "date": "2025-02-03",
+      "type": "politique",
+      "title": "Investiture gouvernement De Wever",
+      "description": "Bart De Wever (N-VA) devient Premier ministre de Belgique",
+      "actors": ["Bart De Wever", "N-VA"],
+      "impact": "federal",
+      "sources": []
+    },
+    {
+      "date": "2025-07-02",
+      "type": "juridique",
+      "title": "Avis IFDH n° 2025/4",
+      "description": "L'Institut Fédéral des Droits Humains conclut que les restrictions au chômage risquent de violer l'article 23 de la Constitution et l'article 12 de la Charte sociale européenne",
+      "actors": ["IFDH"],
+      "impact": "federal",
+      "document_ref": "IFDH 2025/4",
+      "sources": ["https://institutfederaldroitshumains.be/"]
+    },
+    {
+      "date": "2025-07-18",
+      "type": "legislation",
+      "title": "Vote limitation chômage 24 mois",
+      "description": "La Chambre adopte la limitation des allocations de chômage à 24 mois maximum",
+      "actors": ["Chambre des représentants"],
+      "impact": "federal",
+      "personnes_concernees": 184463,
+      "sources": []
+    },
+    {
+      "date": "2025-10-14",
+      "type": "mobilisation",
+      "title": "Manifestation nationale anti-Arizona",
+      "description": "Entre 80 000 et 140 000 personnes défilent à Bruxelles contre les mesures Arizona",
+      "actors": ["FGTB", "CSC", "CGSLB"],
+      "impact": "national",
+      "participants_min": 80000,
+      "participants_max": 140000,
+      "sources": []
+    },
+    {
+      "date": "2025-11-24",
+      "type": "mobilisation",
+      "title": "Grève générale - Jour 1",
+      "description": "Première journée de grève générale contre les mesures Arizona",
+      "actors": ["FGTB", "CSC", "CGSLB"],
+      "impact": "national",
+      "sources": []
+    },
+    {
+      "date": "2025-11-25",
+      "type": "mobilisation",
+      "title": "Grève générale - Jour 2",
+      "description": "Deuxième journée de grève générale",
+      "actors": ["FGTB", "CSC", "CGSLB"],
+      "impact": "national",
+      "sources": []
+    },
+    {
+      "date": "2025-11-26",
+      "type": "mobilisation",
+      "title": "Grève générale - Jour 3",
+      "description": "Troisième journée de grève générale, paralysie du pays",
+      "actors": ["FGTB", "CSC", "CGSLB"],
+      "impact": "national",
+      "sources": []
+    },
+    {
+      "date": "2025-12-15",
+      "type": "mobilisation",
+      "title": "Manifestation secteur culturel FWB",
+      "description": "5 000 à 7 000 personnes manifestent devant le siège des Engagés contre le moratoire Éducation Permanente",
+      "actors": ["Secteur EP", "Organisations culturelles"],
+      "impact": "fwb",
+      "participants_min": 5000,
+      "participants_max": 7000,
+      "sources": []
+    },
+    {
+      "date": "2025-12-17",
+      "type": "legislation",
+      "title": "Décret-programme FWB - Moratoire EP",
+      "description": "Le Parlement FWB vote le moratoire sur l'Éducation Permanente : gel des reconnaissances jusqu'en 2028, non-indexation des subventions",
+      "actors": ["Parlement FWB", "MR", "Les Engagés"],
+      "impact": "fwb",
+      "associations_touchees": 270,
+      "travailleurs_touches": 2300,
+      "sources": []
+    },
+    {
+      "date": "2025-12-17",
+      "type": "economie",
+      "title": "Signature fusion Rossel-IPM",
+      "description": "Contrat définitif de fusion entre Rossel (Le Soir) et IPM (La Libre), concentration médiatique majeure",
+      "actors": ["Rossel", "IPM"],
+      "impact": "national",
+      "sources": []
+    },
+    {
+      "date": "2025-12-31",
+      "type": "juridique",
+      "title": "Avis Conseil d'État - Loi Quintin",
+      "description": "Le Conseil d'État rend un avis de 50-60 pages freinant le projet de dissolution administrative des associations",
+      "actors": ["Conseil d'État"],
+      "impact": "federal",
+      "sources": []
+    },
+    {
+      "date": "2026-01-01",
+      "type": "application",
+      "title": "Entrée en vigueur - Premières exclusions",
+      "description": "100 102 chômeurs de moins de 55 ans exclus des allocations ; moratoire EP entre en vigueur",
+      "actors": ["ONEM"],
+      "impact": "federal",
+      "personnes_concernees": 100102,
+      "sources": ["https://www.onem.be/"]
+    },
+    {
+      "date": "2026-01-08",
+      "type": "juridique",
+      "title": "Publication avis Conseil d'État",
+      "description": "Publication de l'avis du Conseil d'État sur la loi Quintin",
+      "actors": ["Conseil d'État"],
+      "impact": "federal",
+      "sources": []
+    },
+    {
+      "date": "2026-01-14",
+      "type": "rapport",
+      "title": "Rapport LDH 2025",
+      "description": "La Ligue des droits humains publie son rapport annuel dénonçant un 'assaut coordonné sur les contre-pouvoirs'",
+      "actors": ["LDH"],
+      "impact": "national",
+      "sources": ["https://www.liguedh.be/"]
+    },
+    {
+      "date": "2026-01-15",
+      "type": "juridique",
+      "title": "Rejet suspension Cour constitutionnelle",
+      "description": "La Cour constitutionnelle rejette les demandes de suspension du décret-programme FWB",
+      "actors": ["Cour constitutionnelle"],
+      "impact": "fwb",
+      "sources": ["https://www.const-court.be/"]
+    },
+    {
+      "date": "2026-01-29",
+      "type": "juridique",
+      "title": "Dépôt recours 8629 et 8630",
+      "description": "Dépôt des premiers recours en annulation contre le décret-programme FWB",
+      "actors": ["Requérants EP"],
+      "impact": "fwb",
+      "document_ref": "Rôles 8629, 8630",
+      "sources": ["https://www.const-court.be/"]
+    },
+    {
+      "date": "2026-01-30",
+      "type": "juridique",
+      "title": "Dépôt recours 8632",
+      "description": "Dépôt du troisième recours en annulation contre le décret-programme FWB",
+      "actors": ["Requérants EP"],
+      "impact": "fwb",
+      "document_ref": "Rôle 8632",
+      "sources": ["https://www.const-court.be/"]
+    },
+    {
+      "date": "2026-03-12",
+      "type": "mobilisation",
+      "title": "Manifestation nationale annoncée",
+      "description": "Nouvelle manifestation nationale contre les mesures Arizona",
+      "actors": ["FGTB", "CSC", "CGSLB"],
+      "impact": "national",
+      "status": "planned",
+      "sources": []
+    }
+  ],
+  "statistics": {
+    "total_exclusions_chomage_2027": 184463,
+    "exclusions_janvier_2026": 100102,
+    "associations_ep_gelees": 270,
+    "travailleurs_ep_touches": 2300,
+    "malades_longue_duree_sanctionnes": 526000,
+    "manifestants_octobre_2025_max": 140000,
+    "jours_greve_generale": 3,
+    "recours_constitutionnels": 3
+  }
+}

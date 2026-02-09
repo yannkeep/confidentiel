@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Glossaire juridique et institutionnel - Droits sociaux Belgique",
+  "version": "1.0.0",
+  "updated": "2026-02-09",
+  "license": "CC-BY-SA-4.0",
+  "terms": [
+    {
+      "id": "article-23",
+      "term": "Article 23 de la Constitution",
+      "category": "droit_constitutionnel",
+      "definition": "Article de la Constitution belge (1994) garantissant le droit de mener « une vie conforme à la dignité humaine », incluant le droit au travail, à la sécurité sociale, à la protection de la santé, au logement, à l'épanouissement culturel et social.",
+      "implications": "Fondement du principe de standstill obligeant le législateur à ne pas réduire significativement le niveau de protection existant sans justification raisonnable.",
+      "wikidata": "Q2658036",
+      "sources": ["https://www.const-court.be/"]
+    },
+    {
+      "id": "standstill",
+      "term": "Principe de standstill",
+      "aliases": ["Obligation de standstill", "Effet cliquet"],
+      "category": "droit_constitutionnel",
+      "definition": "Principe jurisprudentiel interdisant au législateur de réduire significativement le niveau de protection des droits économiques, sociaux et culturels sans justification raisonnable d'intérêt général.",
+      "jurisprudence_cle": "Cour constitutionnelle, arrêt 69/2023 (triple test de proportionnalité)",
+      "test_proportionnalite": [
+        "Existence d'un recul significatif",
+        "Justification par un motif d'intérêt général",
+        "Proportionnalité stricto sensu de la mesure"
+      ],
+      "sources": ["https://www.const-court.be/"]
+    },
+    {
+      "id": "pacte-culturel",
+      "term": "Pacte culturel",
+      "aliases": ["Loi du 16 juillet 1973"],
+      "category": "droit_culturel",
+      "definition": "Loi garantissant la non-discrimination idéologique et la participation de toutes les tendances philosophiques et politiques à l'élaboration de la politique culturelle.",
+      "principes": [
+        "Non-discrimination idéologique",
+        "Participation de toutes les tendances"
+      ],
+      "application": "Protection des centres d'études liés aux partis politiques (IEV, CEPESS, Centre Jean Gol, Etopia, etc.)",
+      "expert_reference": "Hugues Dumont, USaint-Louis",
+      "sources": []
+    },
+    {
+      "id": "education-permanente",
+      "term": "Éducation Permanente",
+      "aliases": ["EP", "Secteur EP"],
+      "category": "politique_culturelle",
+      "definition": "Secteur défini par le décret du 17 juillet 2003 visant « l'analyse critique de la société, la stimulation d'initiatives démocratiques et collectives, le développement de la citoyenneté active ».",
+      "logique": "Émancipation collective, construction de savoirs partagés, transformation sociale par le pouvoir d'agir",
+      "chiffres_cles": {
+        "associations_reconnues": 270,
+        "travailleurs": 2300,
+        "budget_annuel_millions": 12.9
+      },
+      "wikidata": "Q861686",
+      "sources": []
+    },
+    {
+      "id": "piis",
+      "term": "PIIS",
+      "full_name": "Projet Individualisé d'Intégration Sociale",
+      "category": "protection_sociale",
+      "definition": "Contrat obligatoire depuis 2016 pour tous les bénéficiaires du RIS, définissant les engagements du bénéficiaire en échange de l'aide sociale.",
+      "logique": "Responsabilisation individuelle, conditionnalité des aides",
+      "critique": "Dispositif critiqué pour la stigmatisation de l'inactif et le déséquilibre de la relation contractuelle.",
+      "chiffres": {
+        "personnes_soumises_2020": 106200
+      },
+      "expert_reference": "Abraham Franssen, UCLouvain",
+      "sources": []
+    },
+    {
+      "id": "ris",
+      "term": "RIS",
+      "full_name": "Revenu d'Intégration Sociale",
+      "category": "protection_sociale",
+      "definition": "Aide sociale de dernier recours octroyée par les CPAS aux personnes ne disposant pas de ressources suffisantes.",
+      "conditions": "Résidence effective, disposition au travail, épuisement des droits aux autres prestations",
+      "montants_2026": {
+        "cohabitant": "809,42 €/mois",
+        "isole": "1214,13 €/mois",
+        "famille_charge": "1640,83 €/mois"
+      },
+      "sources": []
+    },
+    {
+      "id": "cpas",
+      "term": "CPAS",
+      "full_name": "Centre Public d'Action Sociale",
+      "category": "institution",
+      "definition": "Organisme public communal chargé de garantir le droit à l'aide sociale et à la dignité humaine.",
+      "missions": [
+        "Octroi du RIS",
+        "Aide sociale générale",
+        "Insertion socioprofessionnelle",
+        "Médiation de dettes"
+      ],
+      "wikidata": "Q2935233",
+      "sources": []
+    },
+    {
+      "id": "onem",
+      "term": "ONEM",
+      "full_name": "Office National de l'Emploi",
+      "aliases": ["RVA (NL)"],
+      "category": "institution",
+      "definition": "Institution publique fédérale de sécurité sociale gérant l'assurance-chômage en Belgique.",
+      "url": "https://www.onem.be/",
+      "wikidata": "Q2659654",
+      "sources": ["https://www.onem.be/"]
+    },
+    {
+      "id": "charte-sociale-europeenne",
+      "term": "Charte sociale européenne",
+      "aliases": ["CSE", "Charte sociale européenne révisée"],
+      "category": "droit_europeen",
+      "definition": "Traité du Conseil de l'Europe (révisé en 1996) garantissant les droits sociaux et économiques fondamentaux.",
+      "article_pertinent": "Article 12 - Droit à la sécurité sociale",
+      "mecanisme_controle": "Plaintes collectives devant le Comité européen des droits sociaux",
+      "plaintes_belgique": ["237/2024", "233/2023", "203/2021", "195/2020"],
+      "wikidata": "Q217528",
+      "sources": ["https://www.coe.int/"]
+    },
+    {
+      "id": "comite-europeen-droits-sociaux",
+      "term": "Comité européen des droits sociaux",
+      "aliases": ["CEDS"],
+      "category": "institution_europeenne",
+      "definition": "Organe du Conseil de l'Europe chargé de contrôler le respect de la Charte sociale européenne.",
+      "competences": [
+        "Examen des rapports nationaux",
+        "Décisions sur plaintes collectives"
+      ],
+      "url": "https://www.coe.int/en/web/european-social-charter",
+      "sources": []
+    },
+    {
+      "id": "ifdh",
+      "term": "IFDH",
+      "full_name": "Institut Fédéral des Droits Humains",
+      "category": "institution",
+      "definition": "Institution nationale des droits humains de Belgique, accréditée statut A par l'ONU.",
+      "missions": [
+        "Avis sur les projets législatifs",
+        "Recommandations aux pouvoirs publics",
+        "Rapports thématiques"
+      ],
+      "avis_pertinent": "Avis n° 2025/4 du 2 juillet 2025 sur les restrictions au chômage",
+      "url": "https://institutfederaldroitshumains.be/",
+      "sources": ["https://institutfederaldroitshumains.be/"]
+    },
+    {
+      "id": "coalition-arizona",
+      "term": "Coalition Arizona",
+      "category": "politique",
+      "definition": "Gouvernement fédéral belge formé le 31 janvier 2025, réunissant MR, N-VA, CD&V, Les Engagés et Vooruit sous la direction de Bart De Wever.",
+      "composition": ["MR", "N-VA", "CD&V", "Les Engagés", "Vooruit"],
+      "premier_ministre": "Bart De Wever",
+      "mesures_phares": [
+        "Limitation chômage à 24 mois",
+        "Gel des salaires 2025-2026",
+        "Sanctions renforcées malades longue durée"
+      ],
+      "sources": []
+    },
+    {
+      "id": "voka",
+      "term": "VOKA",
+      "full_name": "Vlaams netwerk van ondernemingen",
+      "category": "lobby",
+      "definition": "Principale fédération patronale flamande, considérée comme très influente sur la N-VA.",
+      "citation_celebre": "« VOKA is mijn echte baas » (Bart De Wever, 2010)",
+      "influence": "Organisation d'intérêt la plus influente lors des élections 2013-2014 selon Tom Schamp (UGent)",
+      "wikidata": "Q3553054",
+      "sources": []
+    },
+    {
+      "id": "cour-constitutionnelle",
+      "term": "Cour constitutionnelle",
+      "category": "institution_judiciaire",
+      "definition": "Juridiction suprême chargée de contrôler la conformité des lois et décrets à la Constitution.",
+      "competences": [
+        "Recours en annulation",
+        "Questions préjudicielles",
+        "Suspension d'urgence"
+      ],
+      "recours_ep_2026": ["8629", "8630", "8632"],
+      "url": "https://www.const-court.be/",
+      "wikidata": "Q1753621",
+      "sources": ["https://www.const-court.be/"]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+region,code_nuts,population_cible,exclusions_jan_2026,exclusions_total_2027,pourcentage_55_plus_exclus,source,date_source
+Wallonie,BE3,18472,18472,67500,82,ONEM,2025-12
+Flandre,BE2,16705,16705,62000,82,FGTB,2025-12
+Bruxelles,BE1,7654,7654,28000,82,ONEM,2025-12
+Communauté germanophone,BE33,271,271,963,82,ONEM,2025-12
+Total Belgique,BE,100102,100102,184463,82,ONEM,2025-12
