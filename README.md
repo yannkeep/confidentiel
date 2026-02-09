@@ -78,8 +78,8 @@ Les données de ce dépôt alimentent les analyses publiées sur le site princip
 Si vous utilisez ces données dans vos travaux, merci de citer :
 
 ```bibtex
-@dataset{doumont_alertes_sociales_data_2026,
-  author       = {Doumont, Yan},
+@dataset{Rodrom_alertes_sociales_data_2026,
+  author       = {Rodrom, Yan},
   title        = {Données ouvertes — Coalition Arizona \& Moratoire EP},
   year         = {2026},
   publisher    = {GitHub},
@@ -108,7 +108,7 @@ Sous les conditions suivantes :
 
 ## 👤 Contact
 
-**Yan Doumont**  
+**Yan Rodrom**  
 - GitHub : [@yannkeep](https://github.com/yannkeep)  
 - Projet : [ouaisfi.eu](https://ouaisfi.eu/)
 
