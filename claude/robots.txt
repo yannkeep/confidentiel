@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yannkeep.github.io/confidentiel/claude/sitemap.xml
+
+# Data Hub des Trois Guerres Civiques
+# Pendant data du Toolkit sur ouaisfieu
+#
+# Écosystème:
+# https://ouaisfieu.github.io/confidentiel/ (Manifeste)
+# https://ouaisfieu.github.io/confidentiel/claude/ (Toolkit)
+# https://ouaisfieu.github.io/alertes-sociales/
+# https://yannkeep.github.io/alertes-sociales/
+# https://ouaisfi.eu/

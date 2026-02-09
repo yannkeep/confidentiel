@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sources OSINT Belgique — 18 registres publics pour la surveillance citoyenne</title>
+    <meta name="description" content="Annuaire complet des sources OSINT en Belgique : Moniteur Belge, Cumuleo, BCE, FSMA, jurisprudence, parlements. 18 registres publics pour la surveillance citoyenne et l'intelligence civile.">
+    <meta name="keywords" content="OSINT Belgique, sources ouvertes Belgique, Moniteur Belge recherche, Cumuleo mandats, BCE entreprises, registres publics belges, surveillance citoyenne, intelligence civile">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://yannkeep.github.io/confidentiel/claude/sources-osint.html">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yannkeep.github.io/confidentiel/claude/sources-osint.html">
+    <meta property="og:title" content="Sources OSINT Belgique — 18 registres publics">
+    <meta property="og:description" content="Annuaire complet : Moniteur Belge, Cumuleo, BCE, jurisprudence, parlements. Pour la surveillance citoyenne.">
+    <meta property="og:site_name" content="ouaisfi.eu">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "@id": "https://yannkeep.github.io/confidentiel/claude/sources-osint.html#article",
+        "headline": "Sources OSINT Belgique — 18 registres publics pour la surveillance citoyenne",
+        "description": "Annuaire complet des sources ouvertes en Belgique pour l'intelligence civile",
+        "inLanguage": "fr-BE",
+        "dateModified": "2026-02-09",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Toolkit Data 三种公民战法",
+            "url": "https://yannkeep.github.io/confidentiel/claude/"
+        },
+        "about": {"@type": "Thing", "name": "OSINT", "sameAs": "https://www.wikidata.org/wiki/Q1572459"},
+        "hasPart": {
+            "@type": "Dataset",
+            "name": "Sources OSINT Belgique (JSON-LD)",
+            "url": "https://yannkeep.github.io/confidentiel/claude/data/sources-osint-belgique.json"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://yannkeep.github.io/confidentiel/claude/sources-osint.html#faq",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Quelles sont les principales sources OSINT en Belgique ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Les principales sources OSINT en Belgique sont : le Moniteur Belge (ejustice.just.fgov.be) pour les lois et nominations, Cumuleo pour les mandats des élus, la BCE (kbopub.economie.fgov.be) pour les entreprises et ASBL, la FSMA pour les données financières, et le registre de transparence de l'UE pour le lobbying. Pour la jurisprudence : Juridat (juportal.be), Const-Court.be et Raadvst-Consetat.be."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment archiver une page web comme preuve OSINT ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pour archiver une page web comme preuve : 1) Sauvegarder via Wayback Machine (archive.org/web) qui horodate automatiquement, 2) Prendre un screenshot avec URL et date visibles, 3) Calculer le hash SHA256 du fichier (commande: sha256sum fichier), 4) Optionnel: utiliser OpenTimestamps.org pour un horodatage blockchain. Conserver les métadonnées : date, heure, source, contexte de la découverte."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment utiliser Cumuleo pour tracer les mandats d'un élu ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sur Cumuleo.be : 1) Rechercher le nom de l'élu dans la barre de recherche, 2) Consulter la liste de tous ses mandats (publics et privés), 3) Voir les rémunérations déclarées par mandat, 4) Identifier les cumuls potentiellement problématiques, 5) Exporter ou archiver la page comme preuve. Cumuleo agrège les données des déclarations de mandats obligatoires."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment trouver les administrateurs d'une ASBL belge ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pour trouver les administrateurs d'une ASBL : 1) Aller sur la BCE (kbopub.economie.fgov.be), 2) Rechercher par nom ou numéro d'entreprise, 3) Dans la fiche, section 'Fonctions', voir les administrateurs actuels et passés, 4) Pour les statuts complets et PV d'AG : consulter les annexes au Moniteur Belge via ejustice.just.fgov.be."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Où trouver les décisions de la Cour constitutionnelle belge ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Les arrêts de la Cour constitutionnelle belge sont disponibles sur const-court.be. Recherche possible par numéro d'arrêt, date, mots-clés, articles de la Constitution invoqués. Les arrêts sont publiés en français et néerlandais. Pour les recours en cours, consulter le rôle des affaires. Les recours 8629, 8630, 8632 contre le décret-programme FWB y sont référencés."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment accéder à la jurisprudence de la CEDH et du CEDS ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pour la CEDH : base HUDOC (hudoc.echr.coe.int), recherche par pays, article, mots-clés, date. Pour le CEDS (droits sociaux) : HUDOC-ESC (hudoc.esc.coe.int), avec les décisions sur plaintes collectives et conclusions par pays. Filtrer par 'Belgique' pour les affaires pertinentes. Les plaintes collectives 237/2024 (négociation collective) et 233/2023 (mendicité) concernent la Belgique."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Manifeste", "item": "https://ouaisfieu.github.io/confidentiel/"},
+            {"@type": "ListItem", "position": 2, "name": "Toolkit", "item": "https://ouaisfieu.github.io/confidentiel/claude/"},
+            {"@type": "ListItem", "position": 3, "name": "Data", "item": "https://yannkeep.github.io/confidentiel/claude/"},
+            {"@type": "ListItem", "position": 4, "name": "Sources OSINT", "item": "https://yannkeep.github.io/confidentiel/claude/sources-osint.html"}
+        ]
+    }
+    </script>
+    
+    <style>
+        :root { --bg:#0d1117; --surface:#161b22; --border:#30363d; --text:#c9d1d9; --muted:#8b949e; --blue:#58a6ff; --green:#3fb950; --red:#f85149; }
+        * { box-sizing:border-box; margin:0; padding:0; }
+        body { font-family:-apple-system,BlinkMacSystemFont,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+        .container { max-width:900px; margin:0 auto; padding:2rem 1.5rem; }
+        header { border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:2rem; }
+        nav { font-size:0.8125rem; margin-bottom:1rem; }
+        nav a { color:var(--muted); text-decoration:none; margin-right:1rem; }
+        nav a:hover { color:var(--blue); }
+        h1 { font-size:1.75rem; margin-bottom:0.5rem; }
+        .lead { color:var(--muted); margin-bottom:2rem; }
+        h2 { font-size:1.25rem; margin:2rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border); }
+        
+        .sources-grid { display:grid; gap:1rem; }
+        .source { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:1rem; display:grid; grid-template-columns:1fr auto; gap:1rem; align-items:start; }
+        .source:hover { border-color:var(--blue); }
+        .source h3 { font-size:1rem; margin-bottom:0.25rem; }
+        .source h3 a { color:var(--blue); text-decoration:none; }
+        .source p { font-size:0.875rem; color:var(--muted); margin-bottom:0.5rem; }
+        .source .tags { display:flex; flex-wrap:wrap; gap:0.375rem; }
+        .source .tag { font-size:0.6875rem; padding:0.125rem 0.5rem; background:var(--bg); border:1px solid var(--border); border-radius:2em; color:var(--muted); }
+        .source .cat { font-size:0.6875rem; padding:0.25rem 0.5rem; border-radius:3px; font-weight:600; white-space:nowrap; height:fit-content; }
+        .source .cat.officiel { background:rgba(88,166,255,0.15); color:var(--blue); }
+        .source .cat.juridique { background:rgba(63,185,80,0.15); color:var(--green); }
+        .source .cat.archive { background:rgba(248,81,73,0.15); color:var(--red); }
+        .source .cat.stats { background:rgba(139,148,158,0.15); color:var(--muted); }
+        
+        .download { display:inline-flex; align-items:center; gap:0.5rem; background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:0.5rem 1rem; color:var(--text); text-decoration:none; font-size:0.875rem; margin:1rem 0; }
+        .download:hover { border-color:var(--blue); color:var(--blue); }
+        
+        .faq { margin-top:3rem; }
+        .faq-item { border:1px solid var(--border); border-radius:6px; margin-bottom:0.75rem; overflow:hidden; }
+        .faq-q { padding:1rem; font-weight:600; font-size:0.9375rem; background:var(--surface); cursor:pointer; }
+        .faq-a { padding:1rem; font-size:0.875rem; color:var(--muted); border-top:1px solid var(--border); display:none; }
+        .faq-item.open .faq-a { display:block; }
+        
+        footer { margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); text-align:center; font-size:0.8125rem; color:var(--muted); }
+        footer a { color:var(--blue); text-decoration:none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="https://ouaisfieu.github.io/confidentiel/claude/">← Toolkit</a>
+                <a href="./">Data Hub</a>
+                <a href="precedents.html">Précédents</a>
+                <a href="https://ouaisfieu.github.io/confidentiel/claude/guerre-recit.html">Guerre I 舆论战</a>
+            </nav>
+            <h1>Sources OSINT Belgique</h1>
+            <p class="lead">18 registres publics pour la surveillance citoyenne et l'intelligence civile.</p>
+            <a href="data/sources-osint-belgique.json" class="download">📥 Télécharger en JSON-LD</a>
+        </header>
+        
+        <main>
+            <section>
+                <h2>Registres officiels</h2>
+                <div class="sources-grid">
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://www.ejustice.just.fgov.be/cgi/welcome.pl" target="_blank">Moniteur Belge</a></h3>
+                            <p>Journal officiel. Lois, arrêtés, nominations, créations d'ASBL. Source primaire indispensable.</p>
+                            <div class="tags"><span class="tag">législation</span><span class="tag">nominations</span><span class="tag">ASBL</span></div>
+                        </div>
+                        <span class="cat officiel">OFFICIEL</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://www.cumuleo.be/" target="_blank">Cumuleo</a></h3>
+                            <p>Mandats des élus et mandataires publics. Cumuls, rémunérations, trajectoires.</p>
+                            <div class="tags"><span class="tag">mandats</span><span class="tag">élus</span><span class="tag">rémunérations</span></div>
+                        </div>
+                        <span class="cat officiel">OFFICIEL</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://kbopub.economie.fgov.be/" target="_blank">BCE — Banque-Carrefour des Entreprises</a></h3>
+                            <p>Toutes les entreprises et ASBL. Statuts, administrateurs, sièges sociaux.</p>
+                            <div class="tags"><span class="tag">entreprises</span><span class="tag">ASBL</span><span class="tag">administrateurs</span></div>
+                        </div>
+                        <span class="cat officiel">OFFICIEL</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://www.fsma.be/fr/registres-publics" target="_blank">FSMA — Registres publics</a></h3>
+                            <p>Autorité des marchés financiers. Intermédiaires, prospectus, avertissements.</p>
+                            <div class="tags"><span class="tag">finance</span><span class="tag">régulation</span></div>
+                        </div>
+                        <span class="cat officiel">OFFICIEL</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://consult.cbso.nbb.be/" target="_blank">Comptes annuels BNB</a></h3>
+                            <p>Centrale des bilans. Comptes annuels de toutes les entreprises belges.</p>
+                            <div class="tags"><span class="tag">bilans</span><span class="tag">finances</span></div>
+                        </div>
+                        <span class="cat officiel">OFFICIEL</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://ec.europa.eu/transparencyregister/" target="_blank">Registre de transparence UE</a></h3>
+                            <p>Lobbyistes accrédités auprès des institutions européennes. Budgets, clients.</p>
+                            <div class="tags"><span class="tag">lobbying</span><span class="tag">UE</span><span class="tag">transparence</span></div>
+                        </div>
+                        <span class="cat officiel">OFFICIEL</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Jurisprudence</h2>
+                <div class="sources-grid">
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://juportal.be/" target="_blank">Juridat</a></h3>
+                            <p>Portail de la jurisprudence belge. Cour de cassation, cours d'appel, Conseil d'État.</p>
+                            <div class="tags"><span class="tag">arrêts</span><span class="tag">cassation</span></div>
+                        </div>
+                        <span class="cat juridique">JURIDIQUE</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://www.const-court.be/" target="_blank">Cour constitutionnelle</a></h3>
+                            <p>Arrêts, recours en annulation, questions préjudicielles. Rôles 8629/8630/8632 en cours.</p>
+                            <div class="tags"><span class="tag">Constitution</span><span class="tag">recours</span><span class="tag">article 23</span></div>
+                        </div>
+                        <span class="cat juridique">JURIDIQUE</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://www.raadvst-consetat.be/" target="_blank">Conseil d'État</a></h3>
+                            <p>Contentieux administratif, avis de la section de législation.</p>
+                            <div class="tags"><span class="tag">administratif</span><span class="tag">avis</span></div>
+                        </div>
+                        <span class="cat juridique">JURIDIQUE</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://hudoc.echr.coe.int/" target="_blank">HUDOC — CEDH</a></h3>
+                            <p>Base de données de la Cour européenne des droits de l'homme depuis 1959.</p>
+                            <div class="tags"><span class="tag">CEDH</span><span class="tag">droits fondamentaux</span></div>
+                        </div>
+                        <span class="cat juridique">JURIDIQUE</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://hudoc.esc.coe.int/" target="_blank">HUDOC-ESC — CEDS</a></h3>
+                            <p>Comité européen des droits sociaux. Plaintes collectives, Charte sociale.</p>
+                            <div class="tags"><span class="tag">CEDS</span><span class="tag">droits sociaux</span><span class="tag">plaintes collectives</span></div>
+                        </div>
+                        <span class="cat juridique">JURIDIQUE</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://eur-lex.europa.eu/" target="_blank">EUR-Lex</a></h3>
+                            <p>Droit de l'Union européenne. Traités, règlements, directives, CJUE.</p>
+                            <div class="tags"><span class="tag">UE</span><span class="tag">CJUE</span><span class="tag">directives</span></div>
+                        </div>
+                        <span class="cat juridique">JURIDIQUE</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Parlements</h2>
+                <div class="sources-grid">
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://www.lachambre.be/" target="_blank">Chambre des représentants</a></h3>
+                            <p>Documents parlementaires. Projets de loi, propositions, rapports de commission.</p>
+                            <div class="tags"><span class="tag">lois</span><span class="tag">propositions</span><span class="tag">commissions</span></div>
+                        </div>
+                        <span class="cat officiel">OFFICIEL</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://www.pfwb.be/" target="_blank">Parlement FWB</a></h3>
+                            <p>Décrets, travaux parlementaires, questions écrites Fédération Wallonie-Bruxelles.</p>
+                            <div class="tags"><span class="tag">FWB</span><span class="tag">décrets</span><span class="tag">moratoire EP</span></div>
+                        </div>
+                        <span class="cat officiel">OFFICIEL</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Archivage & horodatage</h2>
+                <div class="sources-grid">
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://web.archive.org/" target="_blank">Wayback Machine</a></h3>
+                            <p>Archive d'Internet. Capturer et horodater avant modification/suppression.</p>
+                            <div class="tags"><span class="tag">archive</span><span class="tag">horodatage</span><span class="tag">preuve</span></div>
+                        </div>
+                        <span class="cat archive">ARCHIVE</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://opentimestamps.org/" target="_blank">OpenTimestamps</a></h3>
+                            <p>Horodatage cryptographique blockchain. Preuve d'antériorité d'un document.</p>
+                            <div class="tags"><span class="tag">blockchain</span><span class="tag">timestamp</span><span class="tag">preuve</span></div>
+                        </div>
+                        <span class="cat archive">ARCHIVE</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Statistiques</h2>
+                <div class="sources-grid">
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://www.socialsecurity.be/" target="_blank">Socialsecurity.be</a></h3>
+                            <p>Statistiques sécurité sociale. Données ONEM, INAMI, ONSS.</p>
+                            <div class="tags"><span class="tag">ONEM</span><span class="tag">INAMI</span><span class="tag">chômage</span></div>
+                        </div>
+                        <span class="cat stats">STATS</span>
+                    </div>
+                    <div class="source">
+                        <div>
+                            <h3><a href="https://statbel.fgov.be/" target="_blank">Statbel</a></h3>
+                            <p>Office belge de statistique. Données démographiques, économiques, sociales.</p>
+                            <div class="tags"><span class="tag">démographie</span><span class="tag">économie</span></div>
+                        </div>
+                        <span class="cat stats">STATS</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="faq" id="faq">
+                <h2>Questions fréquentes</h2>
+                
+                <div class="faq-item open">
+                    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Comment archiver une page web comme preuve OSINT ?</div>
+                    <div class="faq-a">1) Sauvegarder via Wayback Machine (archive.org/web) qui horodate automatiquement, 2) Prendre un screenshot avec URL et date visibles, 3) Calculer le hash SHA256 du fichier (<code>sha256sum fichier</code>), 4) Optionnel: utiliser OpenTimestamps.org pour un horodatage blockchain.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Comment utiliser Cumuleo pour tracer les mandats d'un élu ?</div>
+                    <div class="faq-a">1) Rechercher le nom sur Cumuleo.be, 2) Consulter tous ses mandats (publics et privés), 3) Voir les rémunérations déclarées, 4) Identifier les cumuls problématiques, 5) Archiver la page comme preuve.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Comment trouver les administrateurs d'une ASBL belge ?</div>
+                    <div class="faq-a">1) BCE (kbopub.economie.fgov.be) → rechercher par nom ou numéro, 2) Section 'Fonctions' pour les administrateurs actuels/passés, 3) Moniteur Belge pour statuts complets et PV d'AG.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Où trouver les décisions de la Cour constitutionnelle belge ?</div>
+                    <div class="faq-a">Sur const-court.be. Recherche par numéro d'arrêt, date, mots-clés, articles de la Constitution. Arrêts en FR et NL. Les recours 8629/8630/8632 contre le décret FWB y sont référencés.</div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <a href="./">Data Hub</a> · 
+            <a href="https://ouaisfieu.github.io/confidentiel/claude/">Toolkit</a> · 
+            <a href="https://ouaisfieu.github.io/confidentiel/claude/guerre-recit.html">Guerre I 舆论战</a> · 
+            <a href="https://ouaisfi.eu/">ouaisfi.eu</a>
+        </footer>
+    </div>
+</body>
+</html>

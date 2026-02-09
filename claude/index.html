@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Data Hub 三种公民战法 — Ressources et datasets pour l'intelligence civile</title>
+    <meta name="description" content="Hub de ressources pour les Trois Guerres Civiques : sources OSINT Belgique, précédents juridiques, datasets JSON-LD. Données ouvertes pour la surveillance citoyenne et le contentieux stratégique.">
+    <meta name="keywords" content="data hub trois guerres, datasets OSINT, sources belgique, précédents juridiques, JSON-LD intelligence civile, données ouvertes surveillance citoyenne, contentieux stratégique ressources">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://yannkeep.github.io/confidentiel/claude/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yannkeep.github.io/confidentiel/claude/">
+    <meta property="og:title" content="Data Hub 三种公民战法 — Ressources pour l'intelligence civile">
+    <meta property="og:description" content="Sources OSINT, précédents juridiques, datasets JSON-LD. Le pendant data du Toolkit des Trois Guerres.">
+    <meta property="og:locale" content="fr_BE">
+    <meta property="og:site_name" content="ouaisfi.eu">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://yannkeep.github.io/confidentiel/claude/#website",
+        "name": "Data Hub 三种公民战法",
+        "alternateName": "Ressources et datasets pour l'intelligence civile",
+        "description": "Sources OSINT, précédents juridiques, datasets JSON-LD pour les Trois Guerres Civiques",
+        "url": "https://yannkeep.github.io/confidentiel/claude/",
+        "inLanguage": "fr-BE",
+        "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://ouaisfieu.github.io/confidentiel/#website",
+            "name": "三种公民战法 — Les Trois Guerres Civiques",
+            "url": "https://ouaisfieu.github.io/confidentiel/"
+        },
+        "sameAs": "https://ouaisfieu.github.io/confidentiel/claude/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ouaisfi.eu",
+            "url": "https://ouaisfi.eu/",
+            "sameAs": [
+                "https://ouaisfieu.github.io/alertes-sociales/",
+                "https://yannkeep.github.io/alertes-sociales/"
+            ]
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DataCatalog",
+        "@id": "https://yannkeep.github.io/confidentiel/claude/#catalog",
+        "name": "Datasets Trois Guerres Civiques",
+        "description": "Catalogue de données ouvertes pour l'intelligence civile : sources OSINT, précédents juridiques, concepts stratégiques",
+        "url": "https://yannkeep.github.io/confidentiel/claude/",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "ouaisfi.eu"
+        },
+        "dataset": [
+            {
+                "@type": "Dataset",
+                "name": "Sources OSINT Belgique",
+                "description": "18 registres publics pour la surveillance citoyenne",
+                "url": "https://yannkeep.github.io/confidentiel/claude/data/sources-osint-belgique.json",
+                "distribution": {
+                    "@type": "DataDownload",
+                    "encodingFormat": "application/json"
+                }
+            },
+            {
+                "@type": "Dataset",
+                "name": "Précédents juridiques",
+                "description": "12 test cases pour le contentieux stratégique",
+                "url": "https://yannkeep.github.io/confidentiel/claude/data/precedents-juridiques.json",
+                "distribution": {
+                    "@type": "DataDownload",
+                    "encodingFormat": "application/json"
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Manifeste", "item": "https://ouaisfieu.github.io/confidentiel/"},
+            {"@type": "ListItem", "position": 2, "name": "Toolkit", "item": "https://ouaisfieu.github.io/confidentiel/claude/"},
+            {"@type": "ListItem", "position": 3, "name": "Data Hub", "item": "https://yannkeep.github.io/confidentiel/claude/"}
+        ]
+    }
+    </script>
+    
+    <style>
+        :root { --bg:#0d1117; --surface:#161b22; --border:#30363d; --text:#c9d1d9; --muted:#8b949e; --blue:#58a6ff; --green:#3fb950; --red:#f85149; }
+        * { box-sizing:border-box; margin:0; padding:0; }
+        body { font-family:-apple-system,BlinkMacSystemFont,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+        .container { max-width:900px; margin:0 auto; padding:2rem 1.5rem; }
+        
+        header { text-align:center; padding:3rem 0; border-bottom:1px solid var(--border); margin-bottom:2rem; }
+        .badge { display:inline-block; font-size:0.6875rem; letter-spacing:0.1em; border:1px solid var(--green); color:var(--green); padding:0.375rem 0.75rem; margin-bottom:1.5rem; border-radius:3px; }
+        h1 { font-size:clamp(1.75rem,4vw,2.5rem); margin-bottom:0.5rem; }
+        h1 .zh { color:var(--green); }
+        .lead { color:var(--muted); max-width:550px; margin:0 auto 1.5rem; }
+        .header-links { display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; }
+        .header-links a { color:var(--blue); text-decoration:none; font-size:0.875rem; padding:0.5rem 1rem; border:1px solid var(--border); border-radius:6px; }
+        .header-links a:hover { border-color:var(--blue); }
+        
+        h2 { font-size:1.25rem; margin:2rem 0 1rem; display:flex; align-items:center; gap:0.5rem; }
+        h2 .icon { font-size:1.5rem; }
+        
+        .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; }
+        .card { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:1.25rem; text-decoration:none; color:var(--text); transition:border-color 0.2s; }
+        .card:hover { border-color:var(--blue); }
+        .card h3 { font-size:1rem; margin-bottom:0.5rem; }
+        .card p { font-size:0.875rem; color:var(--muted); margin-bottom:0.75rem; }
+        .card .meta { font-size:0.75rem; color:var(--muted); display:flex; gap:1rem; }
+        .card .meta span { display:flex; align-items:center; gap:0.25rem; }
+        
+        .datasets { display:flex; flex-direction:column; gap:0.75rem; }
+        .dataset { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:1rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+        .dataset-info h3 { font-size:0.9375rem; margin-bottom:0.25rem; }
+        .dataset-info p { font-size:0.8125rem; color:var(--muted); }
+        .dataset-dl { display:flex; gap:0.5rem; }
+        .dataset-dl a { font-size:0.75rem; padding:0.375rem 0.75rem; border:1px solid var(--border); border-radius:3px; color:var(--text); text-decoration:none; }
+        .dataset-dl a:hover { border-color:var(--blue); color:var(--blue); }
+        
+        .maillage { background:linear-gradient(135deg,rgba(88,166,255,0.1),var(--surface)); border:1px solid var(--blue); border-radius:6px; padding:1.5rem; margin:2rem 0; }
+        .maillage h3 { font-size:1rem; margin-bottom:1rem; color:var(--blue); }
+        .maillage-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; }
+        .maillage-item { text-align:center; }
+        .maillage-item a { color:var(--text); text-decoration:none; font-size:0.875rem; }
+        .maillage-item a:hover { color:var(--blue); }
+        .maillage-item .label { font-size:0.6875rem; color:var(--muted); display:block; margin-top:0.25rem; }
+        
+        footer { margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); text-align:center; font-size:0.8125rem; color:var(--muted); }
+        footer a { color:var(--blue); text-decoration:none; }
+        .footer-links { margin-top:1rem; display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">DATA HUB — FÉVRIER 2026</div>
+            <h1>Data Hub <span class="zh">三种公民战法</span></h1>
+            <p class="lead">Ressources et datasets pour l'intelligence civile. Le pendant data du Toolkit des Trois Guerres.</p>
+            <div class="header-links">
+                <a href="https://ouaisfieu.github.io/confidentiel/claude/">← Toolkit opérationnel</a>
+                <a href="https://ouaisfieu.github.io/confidentiel/">Manifeste</a>
+            </div>
+        </header>
+        
+        <main>
+            <section>
+                <h2><span class="icon">📂</span> Ressources</h2>
+                <div class="grid">
+                    <a href="sources-osint.html" class="card">
+                        <h3>Sources OSINT Belgique</h3>
+                        <p>18 registres publics pour la surveillance citoyenne : Moniteur Belge, Cumuleo, BCE, jurisprudence...</p>
+                        <div class="meta">
+                            <span>📋 18 sources</span>
+                            <span>🔗 JSON-LD</span>
+                        </div>
+                    </a>
+                    <a href="precedents.html" class="card">
+                        <h3>Précédents juridiques</h3>
+                        <p>12 test cases pour le contentieux stratégique : Urgenda, Klimaatzaak, recours 8629/8630/8632...</p>
+                        <div class="meta">
+                            <span>⚖️ 12 affaires</span>
+                            <span>🔗 JSON-LD</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+            <section>
+                <h2><span class="icon">📥</span> Datasets téléchargeables</h2>
+                <div class="datasets">
+                    <div class="dataset">
+                        <div class="dataset-info">
+                            <h3>sources-osint-belgique.json</h3>
+                            <p>ItemList de 18 sources OSINT avec URLs, descriptions, mots-clés</p>
+                        </div>
+                        <div class="dataset-dl">
+                            <a href="data/sources-osint-belgique.json">JSON-LD</a>
+                        </div>
+                    </div>
+                    <div class="dataset">
+                        <div class="dataset-info">
+                            <h3>precedents-juridiques.json</h3>
+                            <p>ItemList de 12 LegalCase avec citations, dates, descriptions</p>
+                        </div>
+                        <div class="dataset-dl">
+                            <a href="data/precedents-juridiques.json">JSON-LD</a>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-size:0.8125rem;color:var(--muted);margin-top:1rem;">Tous les datasets sont en JSON-LD (Schema.org) et sous licence CC BY-SA 4.0.</p>
+            </section>
+            
+            <div class="maillage">
+                <h3>🔗 Écosystème Trois Guerres Civiques</h3>
+                <div class="maillage-grid">
+                    <div class="maillage-item">
+                        <a href="https://ouaisfieu.github.io/confidentiel/">三种公民战法<br>Manifeste</a>
+                        <span class="label">Le texte fondateur</span>
+                    </div>
+                    <div class="maillage-item">
+                        <a href="https://ouaisfieu.github.io/confidentiel/claude/">Toolkit<br>ouaisfieu</a>
+                        <span class="label">Fiches tactiques</span>
+                    </div>
+                    <div class="maillage-item">
+                        <a href="./">Data Hub<br>yannkeep</a>
+                        <span class="label">Vous êtes ici</span>
+                    </div>
+                    <div class="maillage-item">
+                        <a href="https://ouaisfieu.github.io/alertes-sociales/">Alertes Sociales<br>ouaisfieu</a>
+                        <span class="label">Surveillance citoyenne</span>
+                    </div>
+                    <div class="maillage-item">
+                        <a href="https://yannkeep.github.io/alertes-sociales/">Alertes Sociales<br>yannkeep</a>
+                        <span class="label">Données ouvertes</span>
+                    </div>
+                    <div class="maillage-item">
+                        <a href="https://ouaisfi.eu/">ouaisfi.eu</a>
+                        <span class="label">Contre-institution</span>
+                    </div>
+                </div>
+            </div>
+            
+            <section>
+                <h2><span class="icon">🔗</span> Vers le Toolkit</h2>
+                <div class="grid">
+                    <a href="https://ouaisfieu.github.io/confidentiel/claude/guerre-recit.html" class="card">
+                        <h3>Guerre du récit 舆论战</h3>
+                        <p>OSINT, lead-dexing, cascade médiatique</p>
+                    </a>
+                    <a href="https://ouaisfieu.github.io/confidentiel/claude/guerre-desideration.html" class="card">
+                        <h3>Guerre de la dé-sidération 心理战</h3>
+                        <p>Éducation permanente, collectifs</p>
+                    </a>
+                    <a href="https://ouaisfieu.github.io/confidentiel/claude/guerre-pretoire.html" class="card">
+                        <h3>Guerre du prétoire 法律战</h3>
+                        <p>Contentieux stratégique, test cases</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>DATA HUB — 三种公民战法 — FÉVRIER 2026</p>
+            <p>CC BY-SA 4.0 — FORK • HACK • SPREAD</p>
+            <div class="footer-links">
+                <a href="https://ouaisfieu.github.io/confidentiel/claude/">Toolkit</a>
+                <a href="https://ouaisfieu.github.io/confidentiel/">Manifeste</a>
+                <a href="https://ouaisfi.eu/">ouaisfi.eu</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
